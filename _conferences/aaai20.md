@@ -9,7 +9,7 @@ city:
 state: ""
 thumbnail: "aaai20.png"
 teaser : 
-authors: "Jian Yin, Chunjing Gan, Kaiqi Zhao, Xuan Lin, Zhe Quan, Zhi-Jie Wang"
+authors: "Jian Yin, Chunjing Gan, Kaiqi Zhao, **Xuan Lin**, Zhe Quan, Zhi-Jie Wang"
 bibtex: aaai20.txt
 uri: aaai20.pdf
 arxiv: 
