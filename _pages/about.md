@@ -9,8 +9,11 @@ redirect_from:
 ---
 
 <br />
-　　I am currently a professor with the School of Software Engineering at South China University of Technology. I received my Bachelor Degree in Environmental Science and Engineering in 2006 and Master degree in Control Science and Engineering in 2009, both from Hunan University in Changsha, China. I received the Ph.D. degree in Computer Science from Nanyang Technological University, Singapore, in 2014. From 2014-2016, I worked as a Senior Research Associate on computer vision in the School of Computer Science, University of Adelaide, Australia. My research interests include machine learning, sparse analysis, deep learning and large-scale optimization.
-
+　　<!--I am currently a professor with the School of Software Engineering at South China University of Technology. I received my Bachelor Degree in Environmental Science and Engineering in 2006 and Master degree in Control Science and Engineering in 2009, both from Hunan University in Changsha, China. I received the Ph.D. degree in Computer Science from Nanyang Technological University, Singapore, in 2014. From 2014-2016, I worked as a Senior Research Associate on computer vision in the School of Computer Science, University of Adelaide, Australia. My research interests include machine learning, sparse analysis, deep learning and large-scale optimization.-->
+Hi, my name is Xuan Lin. I'm currently a third-year computer science PhD student at Hunan University, advised by Associate Prof. [Zhe Quan](http://csee.hnu.edu.cn/people/quanzhe). Now, I'm also a visiting scholar in [BDSC Lab](https://bdsc.lab.uic.edu/index.html) at University of Illinois at Chicago, advised by Prof. [Philip S. Yu](https://www.cs.uic.edu/~psyu/). My research generally focuses on:
+* Machine Learning
+* Graph Neural Networks, Knowledge Graph
+* Bioinformatics 
 
 Conferences
 ----------
