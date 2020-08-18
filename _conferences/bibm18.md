@@ -9,7 +9,7 @@ city: Madrid
 state: ""
 thumbnail: "bibm18.png"
 teaser : 
-authors: "Zhe Quan, **Xuan Lin**, Zhi-Jie Wang, Yan Liu, Fan Wang, Kenli Li"
+authors: "Zhe Quan, Xuan Lin, Zhi-Jie Wang, Yan Liu, Fan Wang, Kenli Li"
 bibtex: bibm18.txt
 uri: bibm18.pdf
 arxiv: 
