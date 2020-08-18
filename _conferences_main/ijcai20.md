@@ -1,7 +1,7 @@
 ---
 title: "KGNN: Knowledge Graph Neural Network for Drug-Drug Interaction Prediction"
 collection: conferences_main
-permalink: /files/publications/ijcai20.pdf
+permalink: /publications/ijcai20.pdf
 date: 2020-04-15
 year: "2020"
 venue: "IJCAI"
