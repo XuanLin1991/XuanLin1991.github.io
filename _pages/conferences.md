@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Conferences"
-permalink: /conferences_main/
+permalink: /conferences/
 author_profile: true
 ---
 
@@ -16,7 +16,7 @@ author_profile: true
 {% for i in yearArray %}
 ### {{i}}
 <table>
-{% for post in site.conferences reversed %}
+{% for post in site.conferences_main reversed %}
   {% if post.year == i %}
   <tr>{% include publication.html %}</tr>
   {% endif %}
