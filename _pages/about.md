@@ -23,7 +23,7 @@ Conferences
     <tr>{% include publication.html %}</tr>
   {% endfor %}
   </table>
-  <a href="/conferences_main/">
+  <a href="/mypapers/">
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
 </div>
