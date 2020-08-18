@@ -9,7 +9,7 @@ city:
 state: ""
 thumbnail: "ijcai20.png"
 teaser : 
-authors: "Xuan Lin, Zhe Quan, Zhi-Jie Wang, Tengfei Ma, Xiangxiang Zeng"
+authors: "**Xuan Lin**, Zhe Quan, Zhi-Jie Wang, Tengfei Ma, Xiangxiang Zeng"
 bibtex: ijcai20.txt
 uri: ijcai20.pdf
 arxiv: 
