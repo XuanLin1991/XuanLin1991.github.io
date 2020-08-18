@@ -3,18 +3,18 @@ main:
   - title: "Conferences"
     url: /conferences/
 
-  - title: "Journals"
-    url: /journals/
+  #- title: "Journals"
+  #  url: /journals/
 
   # - title: "Talks"
   #   url: /talks/    
 
-  - title: "My Students"
-    url: /laboratory_students/
+  #- title: "My Students"
+  #  url: /laboratory_students/
 
 
-  - title: "Teaching"
-    url: /teaching/    
+  #- title: "Teaching"
+  #  url: /teaching/    
     
   # - title: "Portfolio"
   #   url: /portfolio/
