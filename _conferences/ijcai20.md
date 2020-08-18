@@ -11,7 +11,7 @@ thumbnail: "ijcai20.png"
 teaser : 
 authors: "Xuan Lin, Zhe Quan, Zhi-Jie Wang, Tengfei Ma, Xiangxiang Zeng"
 bibtex: ijcai20.txt
-uri: https://www.ijcai.org/Proceedings/2020/380
+uri: ijcai20.pdf
 arxiv: 
 project: 
 source: https://github.com/jacklin18/KGNN
