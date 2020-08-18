@@ -9,7 +9,7 @@ city: San Diego
 state: "California"
 thumbnail: "bibm19.png"
 teaser : 
-authors: "Zhe Quan, Yan Guo, Xuan Lin, Zhi-Jie Wang, Xiangxiang Zeng"
+authors: "Zhe Quan, Yan Guo, **Xuan Lin**, Zhi-Jie Wang, Xiangxiang Zeng"
 bibtex: bibm19.txt
 uri: bibm19.pdf
 arxiv: 
