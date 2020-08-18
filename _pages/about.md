@@ -32,7 +32,7 @@ Conferences
 </div>  -->
 
 
-<!--Journals
+Journals
 ----------
 <div>
   <table>
@@ -44,11 +44,12 @@ Conferences
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
 </div>
-<div margin-bottom:100px>
+
+<!-- <div margin-bottom:100px>
   <a href="/journals/">
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
-</div>  -->
+</div> -->
 
 
 <!--
