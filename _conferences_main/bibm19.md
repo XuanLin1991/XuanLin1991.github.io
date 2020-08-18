@@ -1,5 +1,5 @@
 ---
-title: "Graphcpi: Graph neural representation learning for compound-protein interaction"
+title: "GraphCPI: Graph neural representation learning for compound-protein interaction"
 collection: conferences_main
 permalink: /publication/bibm19
 date: 2019-12-06
