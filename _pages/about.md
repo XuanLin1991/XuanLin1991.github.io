@@ -44,6 +44,7 @@ Journals
   {% endfor %}
   </table>
 <div>
+
   <!--
    <a href="/journals_main/">
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
@@ -57,7 +58,7 @@ Journals
 </div> -->
 
 
-
+<!--
 Preprint Paper
 ----------
 <div>
@@ -67,4 +68,4 @@ Preprint Paper
   {% endfor %}
   </table>
 </div> 
-
+-->
