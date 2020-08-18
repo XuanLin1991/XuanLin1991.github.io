@@ -60,10 +60,10 @@ Journals
 
 Preprint Paper
 ----------
-<!-- <div>
+<div>
   <table>
   {% for post in site.preprints reversed %}
     <tr>{% include publication.html %}</tr>
   {% endfor %}
   </table>
-</div> -->
+</div> 
