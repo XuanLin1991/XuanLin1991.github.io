@@ -1,6 +1,6 @@
 ---
 title: "A Novel Model for Imbalanced Data Classification"
-collection: mypapers
+collection: conferences
 permalink: /publication/aaai
 date: 2020-01-15
 year: "2020"
@@ -11,7 +11,7 @@ thumbnail: "aaai20.png"
 teaser : 
 authors: "Jian Yin, Chunjing Gan, Kaiqi Zhao, Xuan Lin, Zhe Quan, Zhi-Jie Wang"
 bibtex: aaai20.txt
-uri: https://www.aaai.org/Papers/AAAI/2020GB/AAAI-YinJ.2426.pdf
+uri: aaai20.pdf
 arxiv: 
 project: 
 source: 
