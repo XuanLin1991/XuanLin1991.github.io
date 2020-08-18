@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Conferences"
-permalink: /conferences/
+title: "Publications"
+permalink: /mypapers/
 author_profile: true
 ---
 
@@ -11,12 +11,12 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign yearArray = "2020, 2019, 2018, 2017, 2016, 2015, 2014, 2012, 2010, 2008" | split: ", " %}
+{% assign yearArray = "2020, 2019, 2018" | split: ", " %}
 
 {% for i in yearArray %}
 ### {{i}}
 <table>
-{% for post in site.conferences_main reversed %}
+{% for post in site.mypapers reversed %}
   {% if post.year == i %}
   <tr>{% include publication.html %}</tr>
   {% endif %}
