@@ -11,7 +11,7 @@ thumbnail: "bibm19.png"
 teaser : 
 authors: "Zhe Quan, Yan Guo, Xuan Lin, Zhi-Jie Wang, Xiangxiang Zeng"
 bibtex: bibm19.txt
-uri: https://ieeexplore.ieee.org/abstract/document/8983267
+uri: bibm19.pdf
 arxiv: 
 project: 
 source:
