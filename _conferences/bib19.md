@@ -9,7 +9,7 @@ city:
 state: ""
 thumbnail: "bib19.png"
 teaser : 
-authors: "**Xuan Lin**, Zhe Quan, Zhi-Jie Wang, Huang Huang, Xiangxiang Zeng"
+authors: "Xuan Lin, Zhe Quan, Zhi-Jie Wang, Huang Huang, Xiangxiang Zeng"
 bibtex: bib19.txt
 uri: bib19.pdf
 arxiv: 
