@@ -55,7 +55,7 @@ Journals
 </div> -->
 
 
-<!--
+
 Preprint Paper
 ----------
 <div>
@@ -64,5 +64,5 @@ Preprint Paper
     <tr>{% include publication.html %}</tr>
   {% endfor %}
   </table>
-</div> -->
+</div> 
 
