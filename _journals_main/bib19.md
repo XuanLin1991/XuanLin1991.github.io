@@ -1,6 +1,6 @@
 ---
 title: "A novel molecular representation with BiGRU neural networks for learning atom"
-collection: articles
+collection: journals_main
 permalink: /publication/ecai
 date: 2019-11-15
 year: "2019"
