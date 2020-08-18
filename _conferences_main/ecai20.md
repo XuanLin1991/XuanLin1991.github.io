@@ -1,6 +1,6 @@
 ---
 title: "DeepGS: Deep Representation Learning of Graphs and Sequences for Drug-Target Binding Affinity Prediction"
-collection: conferences
+collection: conferences_main
 permalink: /publication/ecai20
 date: 2020-01-15
 year: "2020"
