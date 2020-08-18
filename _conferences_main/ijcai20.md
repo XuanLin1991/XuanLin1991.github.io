@@ -1,7 +1,7 @@
 ---
 title: "KGNN: Knowledge Graph Neural Network for Drug-Drug Interaction Prediction"
 collection: conferences_main
-permalink: /publication/ijcai20
+permalink: /files/publications/ijcai20.pdf
 date: 2020-04-15
 year: "2020"
 venue: "IJCAI"
@@ -11,7 +11,7 @@ thumbnail: "ijcai20.png"
 teaser : 
 authors: "Xuan Lin, Zhe Quan, Zhi-Jie Wang, Tengfei Ma, Xiangxiang Zeng"
 bibtex: ijcai20.txt
-uri: https://www.ijcai.org/Proceedings/2020/380
+uri: 
 arxiv: 
 project: 
 source: https://github.com/jacklin18/KGNN
