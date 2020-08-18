@@ -11,7 +11,7 @@ thumbnail: "ecai20.png"
 teaser : 
 authors: "Xuan Lin, Kaiqi Zhao, Tong Xiao, Zhe Quan, Zhi-Jie Wang, S Yu Philip"
 bibtex: ecai20.txt
-uri: https://digital.ecai2020.eu/accepted-papers-main-conference/
+uri: ecai20.pdf
 arxiv: 
 project: 
 source: https://github.com/jacklin18/DeepGS
