@@ -1,0 +1,7 @@
+@inproceedings{yin2020novel,
+  title={A Novel Model for Imbalanced Data Classification.},
+  author={Yin, Jian and Gan, Chunjing and Zhao, Kaiqi and Lin, Xuan and Quan, Zhe and Wang, Zhi-Jie},
+  booktitle={AAAI},
+  pages={6680--6687},
+  year={2020}
+}

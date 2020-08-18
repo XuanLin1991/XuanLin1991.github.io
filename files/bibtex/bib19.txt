@@ -1,0 +1,6 @@
+@article{lin2019novel,
+  title={A novel molecular representation with BiGRU neural networks for learning atom},
+  author={Lin, Xuan and Quan, Zhe and Wang, Zhi-Jie and Huang, Huang and Zeng, Xiangxiang},
+  journal={Briefings in bioinformatics},
+  year={2019}
+}

@@ -1,0 +1,8 @@
+@inproceedings{quan2019graphcpi,
+  title={Graphcpi: Graph neural representation learning for compound-protein interaction},
+  author={Quan, Zhe and Guo, Yan and Lin, Xuan and Wang, Zhi-Jie and Zeng, Xiangxiang},
+  booktitle={2019 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  pages={717--722},
+  year={2019},
+  organization={IEEE}
+}

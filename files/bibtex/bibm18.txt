@@ -1,0 +1,8 @@
+@inproceedings{quan2018system,
+  title={A system for learning atoms based on long short-term memory recurrent neural networks},
+  author={Quan, Zhe and Lin, Xuan and Wang, Zhi-Jie and Liu, Yan and Wang, Fan and Li, Kenli},
+  booktitle={2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+  pages={728--733},
+  year={2018},
+  organization={IEEE}
+}

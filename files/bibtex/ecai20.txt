@@ -1,0 +1,6 @@
+@inproceedings{lin2020deepgs,
+title ={DeepGS: Deep Representation Learning of Graphs and Sequences for Drug-Target Binding Affinity Prediction},
+author ={Lin, Xuan and Zhao, Kaiqi and Xiao, Tong and Quan, Zhe and Wang, Zhi-Jie and Yu, Philip S},
+conference ={24th European Conference on Artificial Intelligence (ECAI)},
+year ={2020}
+}
