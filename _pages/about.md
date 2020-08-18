@@ -43,10 +43,12 @@ Journals
     <tr>{% include publication.html %}</tr>
   {% endfor %}
   </table>
+<div>
+  <!--
    <a href="/journals_main/">
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
-</div>
+</div>-->
 
 <!-- <div margin-bottom:100px>
   <a href="/journals/">
