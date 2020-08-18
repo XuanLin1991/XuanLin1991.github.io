@@ -9,7 +9,7 @@ city:
 state: ""
 thumbnail: "ecai20.png"
 teaser : 
-authors: "Xuan Lin, Kaiqi Zhao, Tong Xiao, Zhe Quan, Zhi-Jie Wang, S Yu Philip"
+authors: "**Xuan Lin**, Kaiqi Zhao, Tong Xiao, Zhe Quan, Zhi-Jie Wang, S Yu Philip"
 bibtex: ecai20.txt
 uri: ecai20.pdf
 arxiv: 
