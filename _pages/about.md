@@ -23,7 +23,7 @@ Conferences
     <tr>{% include publication.html %}</tr>
   {% endfor %}
   </table>
-  <a href="/conferences/">
+  <a href="/conferences_main/">
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
 </div>
@@ -43,7 +43,7 @@ Journals
     <tr>{% include publication.html %}</tr>
   {% endfor %}
   </table>
-   <a href="/journals/">
+   <a href="/journals_main/">
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
 </div>
