@@ -32,7 +32,7 @@ Conferences
 </div>  -->
 
 
-Journals
+<!--Journals
 ----------
 <div>
   <table>
@@ -44,14 +44,14 @@ Journals
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
 </div>
-
-<!-- <div margin-bottom:100px>
+<div margin-bottom:100px>
   <a href="/journals/">
     <button class="btn btn--readmore">Read more <font size="1">>></font></button>
   </a>
 </div>  -->
 
 
+<!--
 Preprint Paper
 ----------
 <div>
@@ -60,5 +60,5 @@ Preprint Paper
     <tr>{% include publication.html %}</tr>
   {% endfor %}
   </table>
-</div>
+</div> -->
 
