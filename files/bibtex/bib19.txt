@@ -2,5 +2,12 @@
   title={A novel molecular representation with BiGRU neural networks for learning atom},
   author={Lin, Xuan and Quan, Zhe and Wang, Zhi-Jie and Huang, Huang and Zeng, Xiangxiang},
   journal={Briefings in bioinformatics},
-  year={2019}
+  volume = {21},
+  number = {6},
+  pages = {2099-2111},
+  year = {2019},
+  month = {11},
+  issn = {1477-4054},
+  doi = {10.1093/bib/bbz125},
+  url = {https://doi.org/10.1093/bib/bbz125}
 }
