@@ -15,6 +15,6 @@ uri: ijcai20.pdf
 arxiv: 
 project: 
 source: https://github.com/jacklin18/KGNN
-poster: 
+poster: "ijcai20-poster.pdf"
 data:
 ---
