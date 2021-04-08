@@ -1,0 +1,9 @@
+@article{li2020predicting,
+  title={Predicting the Disease Risk of Protein Mutation Sequences With Pre-training Model},
+  author={Li, Kuan and Zhong, Yue and Lin, Xuan and Quan, Zhe},
+  journal={Frontiers in Genetics},
+  volume={11},
+  pages={1535},
+  year={2020},
+  publisher={Frontiers}
+}
