@@ -67,6 +67,16 @@ Preprint Paper
   </table>
 </div> 
 
+Journals
+----------
+<div>
+  <table>
+  {% for post in site.journals_main reversed %}
+    <tr>{% include publication.html %}</tr>
+  {% endfor %}
+  </table>
+<div>
+  
 <!--
 Academic Services  
 ----------  
