@@ -7,7 +7,7 @@ year: "2020"
 venue: "Frontiers in genetics"
 city: 
 state: ""
-thumbnail: "frontiers20.png"
+thumbnail: "frontiers20."
 teaser : 
 authors: "Kuan Li, Yue Zhong, Xuan Lin, Zhe Quan"
 bibtex: frontiers20.txt
