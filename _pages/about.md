@@ -66,16 +66,6 @@ Journals
   {% endfor %}
   </table>
 </div> -->
-
-Academic Services  
-----------
-<div>
-  <table>
-  {% for post in site.journals_main reversed %}
-    <tr>{% include publication.html %}</tr>
-  {% endfor %}
-  </table>
-<div>
   
 <!--
 Academic Services  
