@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Xuan Lin's Homepage"
+title                    : "Xuan Lin (林轩)'s Homepage"
 title_separator          : "-"
 name                     : &name "Xuan Lin"
 description              : &description "personal description"
