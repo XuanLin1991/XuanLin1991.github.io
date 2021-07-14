@@ -1,7 +1,0 @@
-@article{zhang2020collaborative,
-  title={Collaborative unsupervised domain adaptation for medical image diagnosis},
-  author={Zhang, Yifan and Wei, Ying and Wu, Qingyao and Zhao, Peilin and Niu, Shuaicheng and Huang, Junzhou and Tan, Mingkui},
-  journal={IEEE Transactions on Image Processing},
-  year={2020},
-  publisher={IEEE}
-}
