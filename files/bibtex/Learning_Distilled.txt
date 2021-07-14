@@ -1,8 +1,0 @@
-@ARTICLE{8663296,
-  author={W. {Liu} and D. {Gong} and M. {Tan} and J. Q. {Shi} and Y. {Yang} and A. G. {Hauptmann}},
-  journal={IEEE Transactions on Knowledge and Data Engineering}, 
-  title={Learning Distilled Graph for Large-Scale Social Network Data Clustering}, 
-  year={2020},
-  volume={32},
-  number={7},
-  pages={1393-1404},}
