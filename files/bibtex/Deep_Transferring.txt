@@ -1,6 +1,0 @@
-@InProceedings{xie2020deep,
-title = {Deep Transferring Quantization},
-author = {Zheng Xie, Zhiquan Wen, Jing Liu, Zhiqiang Liu, Xixian Wu, and Mingkui Tan},
-booktitle = {The European Conference on Computer Vision},
-year = {2020}
-}
