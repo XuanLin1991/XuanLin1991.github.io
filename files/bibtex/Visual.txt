@@ -1,7 +1,0 @@
-@InProceedings{Deng_2018_CVPR,
-author = {Deng, Chaorui and Wu, Qi and Wu, Qingyao and Hu, Fuyuan and Lyu, Fan and Tan, Mingkui},
-title = {Visual Grounding via Accumulated Attention},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2018}
-} 
