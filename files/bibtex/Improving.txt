@@ -1,9 +1,0 @@
-@article{cao2020lccgan,
-  title={Improving Generative Adversarial Networks with Local Coordinate Coding},
-  author={Cao, Jiezhang and Guo, Yong and Shen, Chunhua and Wu, Qingyao and Huang, Junzhou and Tan, Mingkui},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  volume={},
-  number={},
-  pages={},
-  year={2020}
-}
