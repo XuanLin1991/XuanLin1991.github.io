@@ -1,7 +1,0 @@
-@InProceedings{Zeng_2019_ICCV,
-author = {Zeng, Runhao and Huang, Wenbing and Tan, Mingkui and Rong, Yu and Zhao, Peilin and Huang, Junzhou and Gan, Chuang},
-title = {Graph Convolutional Networks for Temporal Action Localization},
-booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
-month = {October},
-year = {2019}
-}
