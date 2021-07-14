@@ -1,7 +1,0 @@
-@InProceedings{Zhuang_2020_CVPR,
-author = {Zhuang, Bohan and Liu, Lingqiao and Tan, Mingkui and Shen, Chunhua and Reid, Ian},
-title = {Training Quantized Neural Networks With a Full-Precision Auxiliary Module},
-booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2020}
-}
