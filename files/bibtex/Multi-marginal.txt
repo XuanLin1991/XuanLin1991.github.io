@@ -1,7 +1,0 @@
-@inproceedings{cao2019multi,
-  title={Multi-marginal wasserstein gan},
-  author={Cao, Jiezhang and Mo, Langyuan and Zhang, Yifan and Jia, Kui and Shen, Chunhua and Tan, Mingkui},
-  booktitle={Advances in Neural Information Processing Systems},
-  pages={1774--1784},
-  year={2019}
-}
