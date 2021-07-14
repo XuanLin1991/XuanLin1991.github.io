@@ -1,7 +1,0 @@
-@inproceedings{tan2014riemannian,
-  title={Riemannian pursuit for big matrix recovery},
-  author={Tan, Mingkui and Tsang, Ivor W and Wang, Li and Vandereycken, Bart and Pan, Sinno Jialin},
-  booktitle={International Conference on Machine Learning},
-  pages={1539--1547},
-  year={2014}
-}
