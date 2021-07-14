@@ -1,8 +1,0 @@
-@ARTICLE{8807218,
-  author={M. {Tan} and Z. {Hu} and Y. {Yan} and J. {Cao} and D. {Gong} and Q. {Wu}},
-  journal={IEEE Transactions on Knowledge and Data Engineering}, 
-  title={Learning Sparse PCA with Stabilized ADMM Method on Stiefel Manifold}, 
-  year={2019},
-  volume={},
-  number={},
-  pages={1-1},}
