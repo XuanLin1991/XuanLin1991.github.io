@@ -1,5 +1,0 @@
-@article{Cao2018Adversarial,
-  title={Adversarial Learning with Local Coordinate Coding},
-  author={Cao, Jiezhang and Guo, Yong and Wu, Qingyao and Shen, Chunhua and Tan, Mingkui},
-  year={2018},
-}
