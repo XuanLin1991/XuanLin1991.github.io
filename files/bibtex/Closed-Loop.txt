@@ -1,7 +1,0 @@
-@InProceedings{Guo_2020_CVPR,
-author = {Guo, Yong and Chen, Jian and Wang, Jingdong and Chen, Qi and Cao, Jiezhang and Deng, Zeshuai and Xu, Yanwu and Tan, Mingkui},
-title = {Closed-Loop Matters: Dual Regression Networks for Single Image Super-Resolution},
-booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2020}
-}
