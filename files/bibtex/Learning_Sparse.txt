@@ -1,7 +1,0 @@
-@inproceedings{tan2010learning,
-  title={Learning sparse svm for feature selection on very high dimensional datasets},
-  author={Tan, Mingkui and Wang, Li and Tsang, Ivor W},
-  booktitle={Proceedings of the 27th international conference on machine learning (ICML-10)},
-  pages={1047--1054},
-  year={2010}
-}
