@@ -1,9 +1,0 @@
-@ARTICLE{9138828,
-  author={Q. {Chen} and Q. {Wu} and J. {Chen} and Q. {Wu} and A. {van den Hengel} and M. {Tan}},
-  journal={IEEE Transactions on Image Processing}, 
-  title={Scripted Video Generation With a Bottom-Up Generative Adversarial Network}, 
-  year={2020},
-  volume={29},
-  number={},
-  pages={7454-7467}
-}
