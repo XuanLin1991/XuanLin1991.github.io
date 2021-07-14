@@ -1,7 +1,0 @@
-@article{guo2020multi,
-  title={Multi-way backpropagation for training compact deep neural networks},
-  author={Guo, Yong and Chen, Jian and Du, Qing and Van Den Hengel, Anton and Shi, Qinfeng and Tan, Mingkui},
-  journal={Neural networks},
-  year={2020},
-  publisher={Elsevier}
-}
