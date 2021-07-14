@@ -1,7 +1,0 @@
-@InProceedings{Zhuang_2019_CVPR,
-author = {Zhuang, Bohan and Shen, Chunhua and Tan, Mingkui and Liu, Lingqiao and Reid, Ian},
-title = {Structured Binary Neural Networks for Accurate Image Classification and Semantic Segmentation},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2019}
-}
