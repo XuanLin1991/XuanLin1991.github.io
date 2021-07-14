@@ -1,8 +1,0 @@
-@ARTICLE{9052469,
-  author={J. {Wang} and K. {Sun} and T. {Cheng} and B. {Jiang} and C. {Deng} and Y. {Zhao} and D. {Liu} and Y. {Mu} and M. {Tan} and X. {Wang} and W. {Liu} and B. {Xiao}},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
-  title={Deep High-Resolution Representation Learning for Visual Recognition}, 
-  year={2020},
-  volume={},
-  number={},
-  pages={1-1},}
