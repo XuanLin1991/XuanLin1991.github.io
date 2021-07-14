@@ -1,5 +1,0 @@
-@inproceedings{Guo2020BreakingTC,
-  title={Breaking the Curse of Space Explosion: Towards Efficient NAS with Curriculum Search},
-  author={Yong Guo and Yaofo Chen and Yin Zheng and Peilin Zhao and Jian Chen and Junzhou Huang and Mingkui Tan},
-  year={2020}
-}
