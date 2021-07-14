@@ -1,8 +1,0 @@
-@misc{zhu2019continual,
-    title={Continual Reinforcement Learning with Diversity Exploration and Adversarial Self-Correction},
-    author={Fengda Zhu and Xiaojun Chang and Runhao Zeng and Mingkui Tan},
-    year={2019},
-    eprint={1906.09205},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
-}
