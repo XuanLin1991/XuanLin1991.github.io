@@ -1,396 +1,447 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="robots" content="index, follow" />
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="keywords" content="Xuan Lin, 林轩, Machine Learning, Bioinformatics, Xiangtan University, 湘潭大学">
-<link rel="stylesheet" href="./files/fig/jemdoc.css" type="text/css" />
-<script src="jquery.min.js"></script>
-<link rel="shortcut icon" href="./files/fig/favicon.ico">
-<title>Xuan Lin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Xuan Lin (林轩) · Associate Professor</title>
+  <!-- 引入Font Awesome 6图标库，用于社交媒体和学术链接图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8fafc;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', system-ui, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 3rem;
+    }
+
+    /* 主内容容器 */
+    .container {
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* ---------- 导航栏 ---------- */
+    .navbar {
+      position: sticky;
+      top: 1rem;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 60px;
+      padding: 0.6rem 2rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.3rem 1.5rem;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .navbar a:hover {
+      color: #1a73e8;
+    }
+
+    /* ---------- 卡片样式 ---------- */
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+      border: 1px solid #f1f5f9;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+      margin-bottom: 0.3rem;
+      font-family: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid #e9eef3;
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2 i {
+      color: #1a73e8;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 1rem 0 0.4rem;
+      color: #0f172a;
+    }
+
+    .affiliation {
+      font-size: 1.1rem;
+      color: #1a73e8;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 1rem 0 0.2rem;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .contact-row i {
+      margin-right: 0.3rem;
+      color: #64748b;
+      width: 1.2rem;
+      text-align: center;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .badge {
+      background: #f1f5f9;
+      color: #1e293b;
+      padding: 0.35rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.2s;
+      border: 1px solid #e2e8f0;
+    }
+
+    .badge:hover {
+      background: #e0e7ff;
+      border-color: #1a73e8;
+      color: #1a73e8;
+    }
+
+    /* 出版物列表 */
+    .pub-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.15s;
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+    }
+
+    .pub-title {
+      font-weight: 650;
+      color: #0f172a;
+      margin-bottom: 0.2rem;
+    }
+
+    .pub-authors {
+      font-size: 0.92rem;
+      color: #475569;
+    }
+
+    .pub-venue {
+      font-size: 0.9rem;
+      color: #1a73e8;
+      font-style: italic;
+      margin-bottom: 0.4rem;
+    }
+
+    .pub-links a {
+      font-size: 0.85rem;
+      margin-right: 1.2rem;
+      text-decoration: none;
+      color: #334155;
+      background: #f8fafc;
+      padding: 0.2rem 0.9rem;
+      border-radius: 20px;
+      transition: 0.2s;
+      display: inline-block;
+      margin-top: 0.25rem;
+    }
+
+    .pub-links a:hover {
+      background: #1a73e8;
+      color: white;
+    }
+
+    .pub-links i {
+      margin-right: 0.2rem;
+    }
+
+    /* 列表样式 */
+    ul.research-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.8rem;
+    }
+
+    ul.research-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.8rem;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    ul.research-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #1a73e8;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .education-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .education-item .period {
+      font-weight: 600;
+      color: #1a73e8;
+      font-size: 0.9rem;
+    }
+
+    hr {
+      margin: 1.2rem 0;
+      border: 0;
+      height: 1px;
+      background: #e9eef3;
+    }
+
+    /* 页脚 */
+    .footer {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .container {
+        gap: 1.2rem;
+      }
+      .card {
+        padding: 1.5rem 1.3rem;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      .navbar {
+        padding: 0.5rem 1rem;
+        gap: 0.2rem 0.8rem;
+        font-size: 0.8rem;
+      }
+      .contact-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+    }
+  </style>
 </head>
- 
- 
 <body>
+<div class="container">
 
-<a id="home" class="anchor"></a>
-<div id="container"> 
-<div class="container"> 
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#education">Education</a>
+    <a href="files/CV.pdf" target="_blank">CV</a>
+  </nav>
 
-<table class="imgtable"><tr><td>
-<a href="./"><img src="./files/fig/Xuanlin2.jpg" alt="" height="215px" /></a>&nbsp;</td>
-<td align="left"><p><a href="./"><font size="4">Xuan Lin (</font><font size="4"; font style="font-family:Microsoft YaHei">林 轩</font><font size="4">)</font></a><br />
-<i> Associate Professor </i><br />
-<a href="https://jwxy.xtu.edu.cn/" target="_blank">School of Computer Science</a><br />
-<a href="https://www.xtu.edu.cn/" target="_blank">Xiangtan University</a><br />
-<br />
-Location: Engineering Building, #401, Yuhu District, Xiangtan, Hunan, China<br />
-<class="staffshortcut">
- <A HREF="#About Me">About Me</A> | 
- <A HREF="#Work Experience">Work Experience</A> | 
- <A HREF="#Research Interests">Research Interests</A> | 
- <A HREF="#Education">Education</A> | 
- <A HREF="#Publications">Publications</A> | 
- <A HREF="#Grants">Grants</A> | 
- <A HREF="#Professional Services">Professional Services</A> | 
- <!--<A HREF="#Honors and Awards">Honors and Awards</A>-->
-<br />
-<br />
- 
-Email: jack_lin@xtu.edu.cn<br />
-[<a href="https://jwxy.xtu.edu.cn/info/1149/2555.htm" target="_blank">中文主页</a>]
-[<a href="https://scholar.google.com/citations?user=8B0t8AYAAAAJ&hl=en" target="_blank">Google Scholar</a>]
-[<a href="https://github.com/XuanLin1991" target="_blank">GitHub</a>]
-</td></tr></table>
+  <!-- 头部卡片：姓名、身份、联系方式 -->
+  <section id="home" class="card">
+    <h1>Xuan Lin <span style="font-size: 1.2rem; font-weight:400;">(林 轩)</span></h1>
+    <div class="affiliation">
+      Associate Professor · School of Computer Science · Xiangtan University
+    </div>
+    <div class="contact-row">
+      <span><i class="fas fa-map-marker-alt"></i> Engineering Building, #401, Yuhu District, Xiangtan, Hunan, China</span>
+      <span><i class="fas fa-envelope"></i> jack_lin@xtu.edu.cn</span>
+    </div>
+    <div class="badge-group">
+      <a href="https://scholar.google.com/citations?user=8B0t8AYAAAAJ&hl=en" class="badge" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+      <a href="https://github.com/XuanLin1991" class="badge" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://jwxy.xtu.edu.cn/info/1149/2555.htm" class="badge" target="_blank"><i class="fas fa-language"></i> 中文主页</a>
+      <a href="#" class="badge"><i class="fas fa-file-pdf"></i> Curriculum Vitae</a>
+    </div>
+  </section>
 
-<A NAME="About Me"><h2>About Me</h2></A>
-I am currently an associate professor in the School of Computer Science, Xiangtan University (XTU), P. R. China.
-Prior to joining XTU, I received my Ph.D. degree in School of Computer Science and Electronic Engineering from Hunan University in June 2021. Since October 2019 till August 2020, I was a visiting scholar at Univesity of Illinois at Chicago (UIC), under the supervison of Prof. Philip S. Yu. 
-My research interests include multi-modal learning, large language model, and AI for drug discovery. I have published more than 20 technical papers in refereed conference proceedings such as AAAI, IJCAI, ECAI, and BIBM, and journals such as IEEE TKDE, TCBB, WIREs Computational Molecular Science and Briefings in Bioinformatics.
-<ul>
-</ul>
-<br />
- 
+  <!-- 关于我 -->
+  <section id="about" class="card">
+    <h2><i class="fas fa-user-circle"></i> About Me</h2>
+    <p style="font-size: 1.05rem; margin-bottom: 0.8rem;">
+      I am an associate professor in the School of Computer Science, Xiangtan University (XTU), P. R. China.
+      Prior to joining XTU, I received my Ph.D. degree from Hunan University in 2021.
+      I was a visiting scholar at University of Illinois at Chicago (UIC), working with Prof. Philip S. Yu.
+    </p>
+    <p style="color: #334155;">
+      My research interests include <strong>multi-modal learning, large language models, and AI for drug discovery</strong>.
+      I have published more than 20 technical papers in top conferences (AAAI, IJCAI, ECAI, BIBM) and journals
+      (IEEE TKDE, TCBB, Briefings in Bioinformatics, etc.).
+    </p>
+  </section>
 
-<A NAME="Work Experience"><h2>Work Experience</h2></A>
-<ul>
-<li>2025.1-now &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Associate Professor, <a href="https://jwxy.xtu.edu.cn/" target="_blank">School of Computer Science</a>, <a href="https://www.xtu.edu.cn/" target="_blank">Xiangtan University</a></li>
-<li>2021.7-2024.12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lecturer, <a href="https://jwxy.xtu.edu.cn/" target="_blank">School of Computer Science</a>, <a href="https://www.xtu.edu.cn/" target="_blank">Xiangtan University</a></li>	
-</ul>
-<br />
+  <!-- 研究兴趣 -->
+  <section id="research" class="card">
+    <h2><i class="fas fa-flask"></i> Research Interests</h2>
+    <p style="margin-bottom: 0.6rem;">My work lies at the intersection of machine learning, graph neural networks, and bioinformatics. Current topics include:</p>
+    <ul class="research-list">
+      <li><strong>Text-based molecule generation</strong></li>
+      <li><strong>LLM for chemical synthesis</strong></li>
+      <li><strong>Drug-target interaction / binding affinity prediction</strong></li>
+      <li><strong>Drug-drug interaction event prediction</strong></li>
+    </ul>
+  </section>
 
+  <!-- 教育背景 -->
+  <section id="education" class="card">
+    <h2><i class="fas fa-university"></i> Education</h2>
+    <div class="education-item">
+      <div class="period">2017.09 – 2021.06</div>
+      <div><strong>Ph.D. in Computer Science and Electronic Engineering</strong></div>
+      <div>Hunan University · Supervisor: Prof. <a href="http://csee.hnu.edu.cn/people/quanzhe" target="_blank">Zhe Quan</a></div>
+    </div>
+    <div class="education-item">
+      <div class="period">2019.10 – 2020.08</div>
+      <div><strong>Visiting Ph.D. student</strong></div>
+      <div>University of Illinois at Chicago · Supervisor: Prof. <a href="https://www.cs.uic.edu/PSYu" target="_blank">Philip S. Yu</a></div>
+    </div>
+  </section>
 
- 
-<A NAME="Research Interests"><h2>Research Interests</h2></A>
-My research interests include machine learning and graph neural networks for bioinformatics. Currently, I focus on the following research topics:
-<ul>
-<li>Text-based molecule generation</li>
-<li>LLM for chemical synthesis</li>
-<Li>Drug-target interaction/binding affinity prediction</Li>
-<li>Drug-drug interaction event prediction</li>
-</ul>
-<br />
+  <!-- 代表性出版物 -->
+  <section id="publications" class="card">
+    <h2><i class="fas fa-book-open"></i> Selected Publications</h2>
 
+    <div class="pub-item">
+      <div class="pub-title">Enhancing chemical reaction and retrosynthesis prediction with large language model and dual-task learning</div>
+      <div class="pub-authors">Xuan Lin, Qingrui Liu, Hongxin Xiang*, Daojian Zeng, Xiangxiang Zeng</div>
+      <div class="pub-venue">IJCAI 2025 (accepted)</div>
+      <div class="pub-links">
+        <a href="./files/publications/IJCAI25-arXiv.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+        <a href="https://github.com/JacklinGroup/ChemDual" target="_blank"><i class="fas fa-code"></i> Code</a>
+      </div>
+    </div>
 
+    <div class="pub-item">
+      <div class="pub-title">DynamicDTA: drug-target binding affinity prediction using dynamics descriptors and graph representation</div>
+      <div class="pub-authors">Dan Luo, Jinyu Zhou, Le Xu, Sisi Yuan, Xuan Lin*</div>
+      <div class="pub-venue">Interdisciplinary Science: Computational Life Sciences, 2025</div>
+      <div class="pub-links">
+        <a href="./files/publications/DynamicDTA.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+        <a href="https://github.com/shmily-ld/DynamicDTA" target="_blank"><i class="fas fa-code"></i> Code</a>
+      </div>
+    </div>
 
- 
-<A NAME="Education"><h2>Education</h2></A>
-<ul>
-<li>2017.09-2021.06 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ph.D. from <a href="http://csee.hnu.edu.cn/" target="_blank">School of Computer Science and Electronic Engineering</a>, <a href="https://www.hnu.edu.cn/" target="_blank">Hunan University</a>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Supervisor: Prof. <a href="http://csee.hnu.edu.cn/people/quanzhe" target="_blank">Zhe Quan</a></li>
-<Li>2019.10-2020.08 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Visiting Ph.D. from <a href="https://cse.csu.edu.cn/" target="_blank">Department of Computer Science</a>, <a href="https://www.uic.edu/" target="_blank">University of Illinois at Chicago</a>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Supervisor: Prof. <a href="https://www.cs.uic.edu/PSYu" target="_blank">Philip S. Yu</a></li>
-</ul>
-<br />
- 
+    <div class="pub-item">
+      <div class="pub-title">CTF-DDI: Constrained tensor factorization for drug–drug interactions prediction</div>
+      <div class="pub-authors">Guosheng Han, Lingzhi Peng, Aocheng Ding, Yan Zhang, Xuan Lin*</div>
+      <div class="pub-venue">Future Generation Computer Systems, 161: 26-34, 2024</div>
+      <div class="pub-links">
+        <a href="./files/publications/2024-FGCS-CTF-DDI.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+        <a href="https://github.com/angelfacedac/CTF_DDI" target="_blank"><i class="fas fa-code"></i> Code</a>
+      </div>
+    </div>
 
-<A NAME="Publications"><h2>Publications</h2></A>
-<font size="3"> 
-<ul>
+    <div class="pub-item">
+      <div class="pub-title">CSCL-DTI: predicting drug-target interaction through cross-view and self-supervised contrastive learning</div>
+      <div class="pub-authors">Xuan Lin, Xi Zhang, Zu-Guo Yu, Yahui Long*, Xiangxiang Zeng, Philip S. Yu</div>
+      <div class="pub-venue">2024</div>
+      <div class="pub-links">
+        <a href="./files/publications/B1245.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+        <a href="https://github.com/xiiiz/CSCL-DTI" target="_blank"><i class="fas fa-code"></i> Code</a>
+      </div>
+    </div>
 
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Qingrui Liu, Hongxin Xiang*, Daojian Zeng, and Xiangxiang Zeng,
-“Enhancing chemical reaction and retrosynthesis prediction with large language model and dual-task learning,” 
-<i>The 34th International Joint Conference on Artificial Intelligence (<b>IJCAI</b>)</i>, 
-2025, accepted. 
-[<a href= "./files/publications/IJCAI25-arXiv.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/JacklinGroup/ChemDual" target="_blank">Code</a>]
-</li>
-</span>
-</p>
+    <div class="pub-item">
+      <div class="pub-title">Interpretable attention network with multi-view learning for drug-drug interaction prediction</div>
+      <div class="pub-authors">Xuan Lin, Qi Wen, Sijie Yang, Zu-Guo Yu, Yahui Long*, Xiangxiang Zeng</div>
+      <div class="pub-venue">IEEE BIBM 2023</div>
+      <div class="pub-links">
+        <a href="./files/publications/bibm23.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+        <a href="https://github.com/Luminous-wq/MVA-DDI" target="_blank"><i class="fas fa-code"></i> Code</a>
+      </div>
+    </div>
 
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Dan Luo, Jinyu Zhou, Le Xu, Sisi Yuan and <b>Xuan Lin*</b>,
-“DynamicDTA: drug-target binding affinity prediction using dynamics descriptors and graph representation,” 
-<i>Interdisciplinary Science: Computational Life Sciences</i>, 
-2025: 1-16. 
-[<a href= "./files/publications/DynamicDTA.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/shmily-ld/DynamicDTA" target="_blank">Code</a>]
-</li>
-</span>
-</p>
+    <div style="margin-top: 1.5rem; text-align: center; color: #64748b;">
+      <i class="fas fa-chevron-down"></i> Full publication list available on <a href="https://scholar.google.com/citations?user=8B0t8AYAAAAJ&hl=en" target="_blank" style="color:#1a73e8;">Google Scholar</a>
+    </div>
+  </section>
 
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Guosheng Han, Lingzhi Peng, Aocheng Ding, Yan Zhang and <b>Xuan Lin*</b>,
-“CTF-DDI: Constrained tensor factorization for drug–drug interactions prediction,” 
-<i>Future Generation Computer Systems</i>, 
-161: 26-34, 2024. 
-[<a href= "./files/publications/2024-FGCS-CTF-DDI.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/angelfacedac/CTF_DDI" target="_blank">Code</a>]
-</li>
-</span>
-</p>
-	
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Xi Zhang, Zu-Guo Yu, Yahui Long*, Xiangxiang Zeng and Philip S. Yu,
-“CSCL-DTI: predicting drug-target interaction through cross-view and self-supervised contrastive learning,” 
-<i>2024 IEEE International Conference on Bioinformatics and Biomedicine (<b>BIBM</b>)</i>, 
-2024. 
-[<a href= "./files/publications/B1245.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/xiiiz/CSCL-DTI" target="_blank">Code</a>]
-</li>
-</span>
-</p>
-	
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Qi Wen, Sijie Yang, Zu-Guo Yu, Yahui Long*, and Xiangxiang Zeng,
-“Interpretable attention network with multi-view learning for drug-drug interaction prediction,” 
-<i>2023 IEEE International Conference on Bioinformatics and Biomedicine (<b>BIBM</b>)</i>, 
-2023. 
-[<a href= "./files/publications/bibm23.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/Luminous-wq/MVA-DDI" target="_blank">Code</a>]
-</li>
-</span>
-</p>
-	
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Lichang Dai, Yafang Zhou, Zu-Guo Yu, Wen Zhang, Jian-Yu Shi, Dong-Sheng Cao, Li Zeng, Haowen Chen*, Bosheng Song*,
-Philip S. Yu and Xiangxiang Zeng, 
-“Comprehensive evaluation of deep and graph learning on drug–drug interactions prediction,” 
-<i>Briefings in Bioinformatics</i>, 
-24(4): bbad235, 2023.
-[<a href= "./files/publications/Bib_2023-review.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/xzenglab/resources-for-DDIs-prediction-using-DL" target="_blank">Code</a>]
-</li>
-</span>
-</p>
-	
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Zhe Quan*, Zhi-Jie Wang, Yan Guo, Xiagxiang Zeng, Philip S Yu, 
-“Effectively Identifying Compound-Protein Interaction using Graph Neural Representation,” 
-<i>IEEE/ACM Transactions on Computational Biology and Bioinformatics</i>, 
-20(2): 932-943, 2022. 
-[<a href= "./files/publications/TCBB_2022-GraphCPI-online.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/jacklin18/GraphCPI" target="_blank">Code</a>]
-</li>
-</span>
-</p>
-	
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Tengfei Ma, <b>Xuan Lin*</b>, Bosheng Song, Philip S Yu, Xiagxiang Zeng*, 
-“KG-MTL: Knowledge Graph Enhanced Multi-Task Learning for Molecular Interaction,” 
-<i>IEEE Transactions on Knowledge and Data Engineering</i>, 
-35(7): 7068-7081, 2022. 
-[<a href= "./files/publications/KG-MTL_TKDE2022.pdf" target="_blank">PDF</a>] 
-[<a href="https://github.com/xzenglab/KG-MTL" target="_blank">Code</a>]
-</li>
-</span>
-</p>
-	
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Xiaoqin Pan, <b>Xuan Lin*</b>, Dongsheng Cao, Xiagxiang Zeng*, Philip S Yu, Lifang He, Ruth Nussinov, Feixiong Cheng, 
-“Deep learning for drug repurposing: methods, databases, and applications,” 
-<i>WIREs Computational Molecular Science</i>, 
-e1597, 2022. 
-[<a href= "./files/publications/WIREs CMS2022.pdf" target="_blank">PDF</a>], 
-<a href= https://www.webofscience.com/wos/woscc/full-record/WOS:000752666100001 target="_blank">Highly Cited Paper</a> 
-</li>
-</span>
-</p>
+  <!-- 工作经历（简洁卡片） -->
+  <section class="card">
+    <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+      <div style="flex: 1;">
+        <div style="font-weight: 600;">Associate Professor</div>
+        <div style="color: #475569;">School of Computer Science, Xiangtan University</div>
+        <div style="font-size: 0.9rem; color: #64748b;">Present</div>
+      </div>
+      <div style="flex: 1;">
+        <div style="font-weight: 600;">Visiting Scholar</div>
+        <div style="color: #475569;">University of Illinois at Chicago (UIC)</div>
+        <div style="font-size: 0.9rem; color: #64748b;">2019 – 2020</div>
+      </div>
+    </div>
+  </section>
 
+  <!-- 页脚 -->
+  <div class="footer">
+    © 2025 Xuan Lin · Powered by GitHub Pages · Last updated: 2025
+  </div>
 
-	
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Kuan Li, Yue Zhong*, <b>Xuan Lin*</b>, Zhe Quan, 
-“Predicting the disease risk of protein mutation sequences with pre-training model,” 
-<i>Frontiers in Genetics</i>, 
-11, 1-10, 2020. 
-[<a href= "./files/publications/frontiers20.pdf" target="_blank">PDF</a>] 
-[<a href= "./files/bibtex/frontiers20.txt" target="_blank">Bibtex</a>] 
-</li>
-</span>
-</p>
-
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Zhe Quan, Zhi-Jie Wang*, Huang Huang, Xiangxiang Zeng, 
-“A novel molecular representation with BiGRU neural networks for learning atom,” 
-<i>Briefings in Bioinformatics</i>, 
-21 (6), 2099-2111, 2020. 
-[<a href= "./files/publications/bib19.pdf" target="_blank">PDF</a>] 
-[<a href= "./files/bibtex/bib19.txt" target="_blank">Bibtex</a>] 
-</li>
-</span>
-</p>
-
- <p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Zhe Quan*, Zhi-Jie Wang*, Tengfei Yu, Ma, Xiangxiang Zeng, 
-“KGNN: Knowledge Graph Neural Network for Drug-Drug Interaction Prediction,” 
-<i>The 29th International Joint Conference on Artifical Intelligence (<b>IJCAI</b>)</i>, 
-2739-2745, 2020. 
-[<a href= "./files/publications/ijcai20.pdf" target="_blank">PDF</a>]
-[<a href= "./files/bibtex/ijcai20.txt" target="_blank">Bibtex</a>]
-[<a href= "./files/poster/ijcai20-poster.pdf" target="_blank">Poster</a>]
-[<a href= "https://github.com/jacklin18/KGNN" target="_blank">Code</a>]
-</li>
-</span>
-</p>
-
- <p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> <b>Xuan Lin</b>, Kaiqi Zhao, Tong Xiao, Zhe Quan*, Zhi-Jie Wang*, Philip S Yu, 
-“DeepGS: Deep Representation Learning of Graphs and Sequences for Drug-Target Binding Affinity Prediction,” 
-<i>The 24th European Conference on Artificial Intelligence (<b>ECAI</b>)</i>, 
-1-8, 2020. 
-[<a href= "./files/publications/ecai20.pdf" target="_blank">PDF</a>]
-[<a href= "./files/bibtex/ecai20.txt" target="_blank">Bibtex</a>]
-[<a href="https://github.com/jacklin18/DeepGS" target="_blank">Code</a>]
-</li>
-</span>
-</p>
- 
-
-
-
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Zhe Quan, <b>Xuan Lin</b>, Zhi-Jie Wang*, Yan Liu, Fan Wang, Kenli Li,
-“A System for Learning Atoms Based on Long Short-Term Memory Recurrent Neural Networks,” 
-<i>2018 IEEE International Conference on Bioinformatics and Biomedicine (<b>BIBM</b>)</i>, 
-728-733, 2018. 
-[<a href= "./files/publications/bibm18.pdf" target="_blank">PDF</a>]
-[<a href= "./files/bibtex/bibm18.txt" target="_blank">Bibtex</a>]
-</li>
-</span>
-</p>
-
-
-<!--
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Wen Tao, Yuansheng Liu*, <b>Xuan Lin</b>, and Xiangxiang Zeng*,
-“Dynamic hypergraph contrastive learning for multi-relational drug-gene interaction prediction,” 
-<i>Briefings in Bioinformatics</i>, 
-2023, accepted. 
-</li>
-</span>
-</p>
-
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Bosheng Song, Zimeng Li, <b>Xuan Lin</b>, Jianmin Wang, Tian Wang, Xiangzheng Fu*, 
-“Pretraining model for biological sequence data,” 
-<i>Briefings in Functional Genomics</i>, 
-20(3), 181-195, 2021. 
-[<a href= "./files/publications/2021_PretrainingModel.pdf" target="_blank">PDF</a>] 
-</li>
-</span>
-</p>
-
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Jian Yin, Chunjing Gan, Kaiqi Zhao, <b>Xuan Lin</b>, Zhe Quan, Zhi-Jie Wang*, 
-“A Novel Model for Imbalanced Data Classification,” 
-<i>The 34th AAAI Conference on Artifical Intelligence (<b>AAAI</b>)</i>, 
-95-104, 2020. 
-[<a href= "./files/publications/aaai20.pdf" target="_blank">PDF</a>]
-[<a href= "./files/bibtex/aaai20.txt" target="_blank">Bibtex</a>]
-</li>
-</span>
-</p>
-
-<p style="text-indent: -1.6rem;margin-left: 0rem;">
-<span><li> Zhe Quan, Yan Guo, <b>Xuan Lin</b>, Zhi-Jie Wang*, Xiangxiang Zeng,
-“GraphCPI: Graph Neural Representation Learning for Compound-Protein Interaction,” 
-<i>2019 IEEE International Conference on Bioinformatics and Biomedicine (<b>BIBM</b>)</i>, 
-717-722, 2019. 
-[<a href= "./files/publications/bibm19.pdf" target="_blank">PDF</a>]
-[<a href= "./files/bibtex/bibm19.txt" target="_blank">Bibtex</a>]
-</li>
-</span>
-</p>
- 
-	
-	
--->
-	
-</ul>
-</font>
-<br />
- 
-
-<A NAME="Grants"><h2>Grants</h2></A>
-<ul>
-<li>National Natural Science Foundation of China Youth Program, “Research on multimodal graph deep learning model for drug repurposing prediction”, Grant No. 62202413, 2023.01-2025.12.</li>
-</ul>
-<br />
-
- 
-<A NAME="Professional Services"><h2>Professional Services</h2></A>
-
-<p><b>Conference Program Committee</b>: </p>
-<font size="3"> 
-<ul>
-<li>The International Joint Conference on Artificial Intelligence (<b>IJCAI 2020-2025</b>)
-<li>The AAAI Conference on Artificial Intelligence (<b>AAAI 2021-2025</b>)
-</ul>
-</font>
-
-<!--	
-<li>The 30th International Joint Conference on Artificial Intelligence (<b>IJCAI 2021</b>)
-<li>The 35th AAAI Conference on Artificial Intelligence (<b>AAAI 2021</b>)
-<li>The 29th International Joint Conference on Artificial Intelligence (<b>IJCAI 2020</b>)
-<li>International Conference on High Performance Computing and Communications (<b>HPCC 2019</b>)</li>
--->
-	
-<p><b>Invited Journal Reviewer</b>: </p>
-<font size="3"> 
-<ul>
-<li>Briefings in Bioinformatics/Neurocomputing/Neural Networks/Frontiers in Genetics/International Journal of Pattern Recognition and Artificial Intelligence</li>
-</ul>
-</font>
-
-<!--
-<p><b>Membership</b>: </p>
-<font size="3"> 
-<ul>
-<li>IEEE Student Member, 2018-Now</li>
-<li>CCF Student Member, 2018-Now</li>
-<li>CAAI Student Member, 2018-Now</li>
-</ul>
-</font>
-<br />
--->
-
-<!-- 
-<A NAME="Honors and Awards"><h2>Honors and Awards</h2></A>
-<font size="3"> 
-<ul>
-<li>2020, Outstanding Graduate, Central South University | <font style="font-family:Microsoft YaHei">中南大学优秀毕业生</font></li>
-<li>2018, Outstanding student, Central South University | <font style="font-family:Microsoft YaHei">中南大学优秀学生</font></li>
-</ul>
-</font>
-<br />
-<br />
--->
-
-<!--
-All Rights Reserved by Min Zeng. Part of page is generated by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
-
- 
-<br />
-<br />
-<hr />
-<div style="text-align:center;">
-
-<a href="https://clustrmaps.com/site/1bix6"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=6CLppT_S_6-Ca1PuctPacfE_h-b6Ko5Rew2BsI7fsF4&cl=ffffff" /></a>	
-
-<a href="https://www.bfcounter.vip/"><img src="https://www.bfcounter.vip/generatepic?userid=b783a1ff-0de3-4aa2-867b-b94247042912" alt="Page Counter" border="0"></a>
-<!--
-<a href='https://clustrmaps.com/site/17c2z'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.js?d=6CLppT_S_6-Ca1PuctPacfE_h-b6Ko5Rew2BsI7fsF4&cl=ffffff&w=a'/></a>
-
-<a href="https://www.bfcounter.vip/"><img src="https://www.bfcounter.vip/generatepic?userid=6528e528-c875-4e15-9dc1-c1922eaed8de" alt="Page Counter" border="0"></a>
-
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=6CLppT_S_6-Ca1PuctPacfE_h-b6Ko5Rew2BsI7fsF4&cl=ffffff&w=a"></script>
-
--->
 </div>
-
-
-</body>
-
-</html>
-
-
-<style>
-hr{
-border: 0px;
-	border-top: 1px solid grey;
-}
-</style>
-
 </body>
 </html>
