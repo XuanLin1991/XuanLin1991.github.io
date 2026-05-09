@@ -9,11 +9,7 @@
 
     <style>
         /* ========== 全局重置与基础样式（Yang Lab 风格） ========== */
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+        * { padding: 0; margin: 0; box-sizing: border-box; }
 
         body {
             background: white;
@@ -29,14 +25,15 @@
             position: relative;
         }
 
-        /* LOGO 容器 */
+        /* ===== Logo 容器 （新增背景图） ===== */
         #logo-container {
             position: fixed !important;
-            top: 0;
-            left: 0 !important;
-            right: 0 !important;
+            top: 0; left: 0; right: 0;
             height: 99px;
-            background-color: white;
+            background-color: #1a3550;  /* 兜底色 */
+            background-image: url('https://placehold.co/1200x99/2c3e50/white?text=Lab+Background+Photo'); /* ← 替换为你的背景图 */
+            background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -46,7 +43,19 @@
             box-sizing: border-box !important;
         }
 
+        /* 半透明遮罩，确保文字清晰 */
+        #logo-container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
+        /* Logo 图片位于遮罩上方 */
         #logo-container img {
+            position: relative;
+            z-index: 1;
             max-width: 100% !important;
             height: auto !important;
             max-height: 100px !important;
@@ -56,8 +65,7 @@
         #menunav {
             position: fixed !important;
             top: 90px;
-            left: 0 !important;
-            right: 0 !important;
+            left: 0; right: 0;
             background: #1a3550;
             font-family: Oswald, sans-serif;
             padding: 0 5px !important;
@@ -111,7 +119,6 @@
             padding: 0 35px 15px 35px;
         }
 
-        /* 通用标题 */
         .componentheading {
             border-bottom: #1a73e8 1px solid;
             color: #1a73e8;
@@ -121,25 +128,48 @@
             white-space: nowrap;
         }
 
-        a {
-            color: black;
-        }
+        a { color: black; }
 
-        /* ========== 首页大合照区域 ========== */
-        .hero-photo {
+        /* ========== 轮播图 ========== */
+        .carousel-container {
             width: 100%;
             max-height: 400px;
             overflow: hidden;
             margin: 15px 0 30px;
             border-radius: 10px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            position: relative;
         }
 
-        .hero-photo img {
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slides img {
             width: 100%;
             height: auto;
             display: block;
+            flex-shrink: 0;
         }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.4);
+            color: white;
+            border: none;
+            font-size: 1.8rem;
+            padding: 0.2em 0.5em;
+            cursor: pointer;
+            z-index: 5;
+            border-radius: 4px;
+        }
+
+        .carousel-arrow:hover { background: rgba(0,0,0,0.7); }
+        .carousel-arrow.left { left: 10px; }
+        .carousel-arrow.right { right: 10px; }
 
         /* 新闻滚动区 */
         .news-scroll {
@@ -176,19 +206,10 @@
         }
 
         /* ========== 其他页面公用样式 ========== */
-        .page-content {
-            display: none;
-        }
+        .page-content { display: none; }
+        .page-content.active { display: block; }
 
-        .page-content.active {
-            display: block;
-        }
-
-        /* 头像表格 */
-        .profile-header-table {
-            width: 100%;
-        }
-
+        .profile-header-table { width: 100%; }
         .profile-avatar {
             width: 160px;
             height: 160px;
@@ -198,7 +219,6 @@
             background: #f1f5f9;
         }
 
-        /* 论文左右布局 */
         .pub-row {
             display: flex;
             gap: 1.5rem;
@@ -207,9 +227,7 @@
             flex-wrap: wrap;
         }
 
-        .pub-row:last-child {
-            border-bottom: none;
-        }
+        .pub-row:last-child { border-bottom: none; }
 
         .pub-figure {
             flex: 0 0 180px;
@@ -229,25 +247,10 @@
             object-fit: cover;
         }
 
-        .pub-info {
-            flex: 1;
-        }
-
-        .pub-title {
-            font-weight: 650;
-            color: #0f172a;
-        }
-
-        .pub-authors {
-            font-size: 0.92rem;
-            color: #475569;
-        }
-
-        .pub-venue {
-            font-size: 0.9rem;
-            color: #1a73e8;
-            font-style: italic;
-        }
+        .pub-info { flex: 1; }
+        .pub-title { font-weight: 650; color: #0f172a; }
+        .pub-authors { font-size: 0.92rem; color: #475569; }
+        .pub-venue { font-size: 0.9rem; color: #1a73e8; font-style: italic; }
 
         .pub-links a {
             font-size: 0.85rem;
@@ -261,12 +264,8 @@
             margin-top: 0.3rem;
         }
 
-        .pub-links a:hover {
-            background: #1a73e8;
-            color: white;
-        }
+        .pub-links a:hover { background: #1a73e8; color: white; }
 
-        /* 团队成员网格 */
         .team-grid {
             display: flex;
             flex-wrap: wrap;
@@ -296,17 +295,9 @@
             margin-bottom: 20px;
         }
 
-        .member b {
-            display: block;
-            margin-bottom: 5px;
-        }
+        .member b { display: block; margin-bottom: 5px; }
+        .member p { margin: 0; font-size: 11pt; }
 
-        .member p {
-            margin: 0;
-            font-size: 11pt;
-        }
-
-        /* 地图容器 */
         .map-container {
             text-align: center;
             margin: 25px 0 15px;
@@ -317,54 +308,26 @@
             border-radius: 8px;
         }
 
-        /* 页脚 */
-        p#z_foot {
-            text-align: center;
-            margin: 20px 0;
-        }
+        p#z_foot { text-align: center; margin: 20px 0; }
 
-        /* 响应式 */
         @media (max-width: 768px) {
-            .profile-header-table td {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-            .profile-avatar {
-                margin: 0 auto 1rem auto;
-            }
-
-            .pub-row {
-                flex-direction: column;
-            }
-
-            .pub-figure {
-                flex: 0 0 auto;
-                height: 160px;
-                width: 100%;
-            }
-
-            #padd {
-                padding: 0 15px 10px 15px;
-            }
-
-            .member {
-                width: calc(50% - 20px);
-            }
+            .profile-header-table td { display: block; width: 100%; text-align: center; }
+            .profile-avatar { margin: 0 auto 1rem auto; }
+            .pub-row { flex-direction: column; }
+            .pub-figure { flex: 0 0 auto; height: 160px; width: 100%; }
+            #padd { padding: 0 15px 10px 15px; }
+            .member { width: calc(50% - 20px); }
         }
 
         @media (max-width: 480px) {
-            .member {
-                width: 100%;
-            }
+            .member { width: 100%; }
         }
     </style>
 </head>
 
 <body>
 <div id="wrapper">
-    <!-- ====== LOGO ====== -->
+    <!-- ====== LOGO (已加背景图) ====== -->
     <div id="logo-container">
         <img src="https://placehold.co/400x80/white/1a3550?text=Xuan+Lin+Research+Group" alt="Lab Logo">
     </div>
@@ -381,25 +344,24 @@
             </ul>
         </div>
 
-        <!-- ====== 页面内容区 ====== -->
         <div id="padd">
 
             <!-- ==================== 首页 HOME ==================== -->
             <div id="home-page" class="page-content active">
-                <!-- 课题组合照大图 -->
-                <div class="hero-photo">
-                    <img src="https://placehold.co/1200x400/2c3e50/white?text=Research+Group+Photo"
-                         alt="Group Photo">
+                <!-- 轮播课题组合照 -->
+                <div class="carousel-container" id="groupCarousel">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <img src="https://placehold.co/1200x400/2c3e50/white?text=Group+Photo+1" alt="Group photo 1">
+                        <img src="https://placehold.co/1200x400/3a5a40/white?text=Group+Photo+2" alt="Group photo 2">
+                        <img src="https://placehold.co/1200x400/4a4e69/white?text=Group+Photo+3" alt="Group photo 3">
+                    </div>
+                    <button class="carousel-arrow left" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-arrow right" onclick="moveSlide(1)">&#10095;</button>
                 </div>
 
                 <!-- Research -->
-                <div class="componentheading">
-                    <i class="fas fa-flask"></i> Research
-                </div>
-                <p>
-                    My work lies at the intersection of <b>machine learning</b>, <b>graph neural networks</b>,
-                    and <b>bioinformatics</b>. We are interested in:
-                </p>
+                <div class="componentheading"><i class="fas fa-flask"></i> Research</div>
+                <p>My work lies at the intersection of <b>machine learning</b>, <b>graph neural networks</b>, and <b>bioinformatics</b>. We are interested in:</p>
                 <ul style="padding-left: 1.8rem; margin-bottom: 20px;">
                     <li>Text-based molecule generation</li>
                     <li>LLM for chemical synthesis</li>
@@ -408,70 +370,51 @@
                 </ul>
 
                 <!-- News -->
-                <div class="componentheading">
-                    <i class="fas fa-bullhorn"></i> News
-                </div>
+                <div class="componentheading"><i class="fas fa-bullhorn"></i> News</div>
                 <div class="news-scroll">
-                    <div class="news-item">
-                        <span class="date">2025</span>
-                        Our paper "Enhancing chemical reaction and retrosynthesis prediction with large language model"
-                        was accepted by <b>IJCAI 2025</b>.
-                    </div>
-                    <div class="news-item">
-                        <span class="date">2025</span>
-                        DynamicDTA paper published in <b>Interdisciplinary Science: Computational Life Sciences</b>.
-                    </div>
-                    <div class="news-item">
-                        <span class="date">2024</span>
-                        CTF-DDI paper published in <b>Future Generation Computer Systems</b>.
-                    </div>
-                    <div class="news-item">
-                        <span class="date">2023</span>
-                        MVA-DDI paper presented at <b>IEEE BIBM 2023</b>.
-                    </div>
-                    <div class="news-item">
-                        <span class="date">2021</span>
-                        Received Ph.D. degree from <b>Hunan University</b>.
-                    </div>
+                    <div class="news-item"><span class="date">2025</span> Our paper "Enhancing chemical reaction ..." accepted by <b>IJCAI 2025</b>.</div>
+                    <div class="news-item"><span class="date">2025</span> DynamicDTA published in <b>Interdisciplinary Science</b>.</div>
+                    <div class="news-item"><span class="date">2024</span> CTF-DDI in <b>Future Generation Computer Systems</b>.</div>
+                    <div class="news-item"><span class="date">2023</span> MVA-DDI at <b>IEEE BIBM 2023</b>.</div>
+                    <div class="news-item"><span class="date">2021</span> Ph.D. from Hunan University.</div>
                 </div>
 
                 <!-- Positions -->
-                <div class="componentheading">
-                    <i class="fas fa-user-plus"></i> Positions
-                </div>
-                <p>We are always looking for highly motivated students and postdocs to join our lab!</p>
+                <div class="componentheading"><i class="fas fa-user-plus"></i> Positions</div>
+                <p>We are always looking for highly motivated students and postdocs!</p>
                 <ul class="position-list">
-                    <li>Master / Ph.D. students (with CS or biology backgrounds)</li>
-                    <li>Postdoctoral researchers in machine learning / bioinformatics</li>
+                    <li>Master / Ph.D. students (CS or biology backgrounds)</li>
+                    <li>Postdoctoral researchers in ML/bioinformatics</li>
                     <li>Undergraduate research interns</li>
                 </ul>
-                <p style="margin-top: 0.8rem;">
-                    If you are interested, please send your CV to <a href="mailto:jack_lin@xtu.edu.cn" style="color:#1a73e8; font-weight:bold;">jack_lin@xtu.edu.cn</a>.
-                </p>
+                <p style="margin-top: 0.8rem;">Send your CV to <a href="mailto:jack_lin@xtu.edu.cn" style="color:#1a73e8; font-weight:bold;">jack_lin@xtu.edu.cn</a>.</p>
 
-                <!-- Visitors Map (放在首页底部) -->
-                <div class="componentheading">
-                    <i class="fas fa-globe-americas"></i> Visitors Map
-                </div>
+                <!-- Visitors Map (真实世界地图示例) -->
+                <div class="componentheading"><i class="fas fa-globe-americas"></i> Visitors Map</div>
                 <div class="map-container">
-                    <img src="https://placehold.co/800x300/1e293b/white?text=World+Visitor+Map+(connect+ClustrMaps)"
-                         alt="Visitor Map">
+                    <!-- 静态世界地图（来自 OpenStreetMap，无需注册即可显示世界“照片”） -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1000px-World_map_-_low_resolution.svg.png"
+                         alt="World Visitor Map"
+                         style="border: 1px solid #ccc; border-radius: 8px;">
+                    <!-- 
+                    ★ 如果想使用动态访客标记，注册 ClustrMaps 后替换为：
+                    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=YOUR_ID&cl=ffffff&w=a"></script>
+                    或 MapMyVisitors :
+                    <script type="text/javascript" src="//mapmyvisitors.com/map.js?d=YOUR_USERNAME"></script>
+                    -->
                 </div>
                 <p style="text-align: center; color: #94a3b8; font-size: 0.9rem;">
-                    🌍 接入 <a href="https://clustrmaps.com/" target="_blank" style="color:#1a73e8;">ClustrMaps</a> 或 MapMyVisitors 后自动显示实时访客。
+                    🌍 上图已展示世界地图轮廓。<br>接入 <a href="https://clustrmaps.com/" target="_blank" style="color:#1a73e8;">ClustrMaps</a> 后可显示实时访客位置热点。
                 </p>
             </div>
 
-            <!-- ==================== 个人介绍页 ABOUT ==================== -->
+            <!-- ==================== 个人介绍页 ==================== -->
             <div id="about-page" class="page-content">
-                <div class="componentheading">
-                    <i class="fas fa-user-circle"></i> About Me
-                </div>
+                <div class="componentheading"><i class="fas fa-user-circle"></i> About Me</div>
                 <table class="profile-header-table">
-                    <tbody><tr>
+                    <tr>
                         <td style="text-align: center; width: 200px;">
-                            <img src="https://placehold.co/300x300/1a73e8/white?text=Xuan+Lin"
-                                 alt="Xuan Lin" class="profile-avatar">
+                            <img src="https://placehold.co/300x300/1a73e8/white?text=Xuan+Lin" alt="Xuan Lin" class="profile-avatar">
                         </td>
                         <td width="20"></td>
                         <td>
@@ -480,44 +423,31 @@
                             <p>School of Computer Science, Xiangtan University</p>
                             <br>
                             <p>
-                                <a href="https://scholar.google.com/citations?user=8B0t8AYAAAAJ&hl=en" target="_blank">
-                                    <i class="fas fa-graduation-cap"></i> Google Scholar
-                                </a>
-                                &nbsp;|&nbsp;
-                                <a href="https://github.com/XuanLin1991" target="_blank">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                                &nbsp;|&nbsp;
-                                <a href="https://jwxy.xtu.edu.cn/info/1149/2555.htm" target="_blank">
-                                    中文主页
-                                </a>
+                                <a href="https://scholar.google.com/citations?user=8B0t8AYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a> &nbsp;|&nbsp;
+                                <a href="https://github.com/XuanLin1991" target="_blank"><i class="fab fa-github"></i> GitHub</a> &nbsp;|&nbsp;
+                                <a href="https://jwxy.xtu.edu.cn/info/1149/2555.htm" target="_blank">中文主页</a>
                             </p>
                             <br>
                             <p><i class="fas fa-map-marker-alt"></i> Engineering Building, #401, Yuhu District, Xiangtan, Hunan, China</p>
                             <p><i class="fas fa-envelope"></i> jack_lin@xtu.edu.cn</p>
                         </td>
                     </tr>
-                    </tbody></table>
-
+                </table>
                 <div class="componentheading"><i class="fas fa-university"></i> Education</div>
                 <p><b>2017.09 – 2021.06</b> &nbsp; Ph.D. in Computer Science, Hunan University</p>
-                <p><b>2019.10 – 2020.08</b> &nbsp; Visiting Ph.D., University of Illinois at Chicago (with Prof. Philip S. Yu)</p>
+                <p><b>2019.10 – 2020.08</b> &nbsp; Visiting Ph.D., UIC (Prof. Philip S. Yu)</p>
 
                 <div class="componentheading"><i class="fas fa-briefcase"></i> Work Experience</div>
                 <p><b>Associate Professor</b>, School of Computer Science, Xiangtan University (Present)</p>
                 <p><b>Visiting Scholar</b>, University of Illinois at Chicago (2019–2020)</p>
             </div>
 
-            <!-- ==================== 论文页 PUBLICATIONS ==================== -->
+            <!-- ==================== 论文页 ==================== -->
             <div id="publications-page" class="page-content">
-                <div class="componentheading">
-                    <i class="fas fa-book-open"></i> Selected Publications
-                </div>
+                <div class="componentheading"><i class="fas fa-book-open"></i> Selected Publications</div>
 
                 <div class="pub-row">
-                    <div class="pub-figure">
-                        <img src="https://placehold.co/400x250?text=ChemDual" alt="ChemDual">
-                    </div>
+                    <div class="pub-figure"><img src="https://placehold.co/400x250?text=ChemDual" alt="ChemDual"></div>
                     <div class="pub-info">
                         <div class="pub-title">Enhancing chemical reaction and retrosynthesis prediction with large language model and dual-task learning</div>
                         <div class="pub-authors">Xuan Lin, Qingrui Liu, Hongxin Xiang*, Daojian Zeng, Xiangxiang Zeng</div>
@@ -530,13 +460,11 @@
                 </div>
 
                 <div class="pub-row">
-                    <div class="pub-figure">
-                        <img src="https://placehold.co/400x250?text=DynamicDTA" alt="DynamicDTA">
-                    </div>
+                    <div class="pub-figure"><img src="https://placehold.co/400x250?text=DynamicDTA" alt="DynamicDTA"></div>
                     <div class="pub-info">
                         <div class="pub-title">DynamicDTA: drug-target binding affinity prediction using dynamics descriptors and graph representation</div>
                         <div class="pub-authors">Dan Luo, Jinyu Zhou, Le Xu, Sisi Yuan, Xuan Lin*</div>
-                        <div class="pub-venue">Interdisciplinary Science: Computational Life Sciences, 2025</div>
+                        <div class="pub-venue">Interdisciplinary Science, 2025</div>
                         <div class="pub-links">
                             <a href="files/publications/DynamicDTA.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             <a href="https://github.com/shmily-ld/DynamicDTA" target="_blank"><i class="fas fa-code"></i> Code</a>
@@ -545,9 +473,7 @@
                 </div>
 
                 <div class="pub-row">
-                    <div class="pub-figure">
-                        <img src="https://placehold.co/400x250?text=CTF-DDI" alt="CTF-DDI">
-                    </div>
+                    <div class="pub-figure"><img src="https://placehold.co/400x250?text=CTF-DDI" alt="CTF-DDI"></div>
                     <div class="pub-info">
                         <div class="pub-title">CTF-DDI: Constrained tensor factorization for drug–drug interactions prediction</div>
                         <div class="pub-authors">Guosheng Han, Lingzhi Peng, Aocheng Ding, Yan Zhang, Xuan Lin*</div>
@@ -560,9 +486,7 @@
                 </div>
 
                 <div class="pub-row">
-                    <div class="pub-figure">
-                        <img src="https://placehold.co/400x250?text=CSCL-DTI" alt="CSCL-DTI">
-                    </div>
+                    <div class="pub-figure"><img src="https://placehold.co/400x250?text=CSCL-DTI" alt="CSCL-DTI"></div>
                     <div class="pub-info">
                         <div class="pub-title">CSCL-DTI: predicting drug-target interaction through cross-view and self-supervised contrastive learning</div>
                         <div class="pub-authors">Xuan Lin, Xi Zhang, Zu-Guo Yu, Yahui Long*, Xiangxiang Zeng, Philip S. Yu</div>
@@ -575,9 +499,7 @@
                 </div>
 
                 <div class="pub-row">
-                    <div class="pub-figure">
-                        <img src="https://placehold.co/400x250?text=MVA-DDI" alt="MVA-DDI">
-                    </div>
+                    <div class="pub-figure"><img src="https://placehold.co/400x250?text=MVA-DDI" alt="MVA-DDI"></div>
                     <div class="pub-info">
                         <div class="pub-title">Interpretable attention network with multi-view learning for drug-drug interaction prediction</div>
                         <div class="pub-authors">Xuan Lin, Qi Wen, Sijie Yang, Zu-Guo Yu, Yahui Long*, Xiangxiang Zeng</div>
@@ -588,17 +510,14 @@
                         </div>
                     </div>
                 </div>
-
                 <p style="text-align: center; color: #64748b; margin-top: 1.5rem;">
                     Full list on <a href="https://scholar.google.com/citations?user=8B0t8AYAAAAJ&hl=en" target="_blank" style="color:#1a73e8; font-weight: bold;">Google Scholar</a>
                 </p>
             </div>
 
-            <!-- ==================== 团队成员页 GROUP ==================== -->
+            <!-- ==================== 团队成员页 ==================== -->
             <div id="group-page" class="page-content">
-                <div class="componentheading">
-                    <i class="fas fa-users"></i> Group Members
-                </div>
+                <div class="componentheading"><i class="fas fa-users"></i> Group Members</div>
                 <div class="team-grid">
                     <div class="member">
                         <img src="https://placehold.co/300x300/475569/white?text=Liu" alt="Qingrui Liu">
@@ -632,27 +551,43 @@
 
         </div> <!-- /#padd -->
 
-        <!-- ====== 页脚 ====== -->
-        <p id="z_foot">
-            <br>
-            © 2025 Xuan Lin · School of Computer Science, Xiangtan University · Last updated: 2025
-        </p>
-    </div> <!-- /#page -->
-</div> <!-- /#wrapper -->
+        <p id="z_foot"><br>© 2025 Xuan Lin · School of Computer Science, Xiangtan University · Last updated: 2025</p>
+    </div>
+</div>
 
-<!-- ====== 简单的页面切换脚本 ====== -->
+<!-- ====== 页面切换 & 轮播控制脚本 ====== -->
 <script>
+    // 页面切换
     function showPage(pageName) {
-        // 隐藏所有页面
         const pages = document.querySelectorAll('.page-content');
         pages.forEach(page => page.classList.remove('active'));
-
-        // 显示选中的页面
         const activePage = document.getElementById(pageName + '-page');
-        if (activePage) {
-            activePage.classList.add('active');
-        }
+        if (activePage) activePage.classList.add('active');
     }
+
+    // 图片轮播（自动 + 手动）
+    const slides = document.getElementById('carouselSlides');
+    let currentIndex = 0;
+    const totalSlides = slides ? slides.children.length : 0;
+
+    function updateSlidePosition() {
+        if (!slides) return;
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function moveSlide(direction) {
+        if (totalSlides === 0) return;
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        updateSlidePosition();
+    }
+
+    // 自动播放
+    setInterval(() => {
+        if (totalSlides > 0) {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlidePosition();
+        }
+    }, 4000);
 </script>
 </body>
 </html>
